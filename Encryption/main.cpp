@@ -1,10 +1,4 @@
-#Encryption XOR
-
-## Description
-
-
-### Main file
-      //Libraries used 
+//Libraries used 
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
@@ -13,7 +7,7 @@
 using namespace std;
 
 //Conecting local libraries
-#include "encryptionFunctions.h"
+#include "encryption.h"
 #include "database.h"
 
 //Defining name of the file where the passwords will be located
