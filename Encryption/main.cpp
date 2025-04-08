@@ -38,6 +38,7 @@ string decryptPassword(int index){
 
 
 int main() {
+    
     char option;
     //Variables
     int menu;
