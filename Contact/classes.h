@@ -1,11 +1,13 @@
 
 class Contacts{
     private:
-    string name;
+
     string phoneNumber;
     string email;
 
     public:
+    string name;
+
     Contacts(string n, string p, string e){
         name = n;
         phoneNumber = p;
