@@ -27,12 +27,35 @@ int main(){
     }
 
 
-    contactList = loadContacts(filename);
-    contactsFrom = convertToContacts(contactList);
+    // contactList = loadContacts(filename);
+    // contactsFrom = convertToContacts(contactList);
     
-        for (int i = 0; i < contactsFrom.size(); i++) {
-            contactsFrom[i].display();
+
+    
+    int option;
+
+    do{
+        contactList = loadContacts(filename);
+        contactsFrom = convertToContacts(contactList);
+        cout<<"Menu \n"<<"1. Show Contacts\n2. Create a new contact\n0. Exit\n";
+        cin>>option;
+
+        if(option == 1){
+            for (int i = 0; i < contactsFrom.size(); i++) {
+                contactsFrom[i].display();
+            }
+        }else if(option == 2){
+            string name, phoneNumber, email;
+            cout<<"Enter name: ";
+            cin>>name;
+            cout<<"Enter phone Number: ";
+            cin>>phoneNumber;
+            cout<<"Enter email: ";
+            cin>>email;
+
+            saveContact(filename, name,phoneNumber,email);
         }
-    
+
+    }while(option !=0);
     return 0;
 }

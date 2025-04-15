@@ -15,7 +15,17 @@ class Contacts{
     }
 
     void display()  {
-        cout << "Name: " << name << ", Phone: " << phoneNumber << ", Email: " << email << endl;
+        string correctView;
+        int i = 0;
+        for(char c: phoneNumber){
+            if(i == 3 || i == 6){
+                correctView+='-';
+            }
+            correctView += c;
+            i++;
+        }
+
+        cout << "Name: " << name << ", Phone: " << correctView << ", Email: " << email << endl;
     }
 
 };

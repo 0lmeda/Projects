@@ -26,3 +26,12 @@ vector <string> loadContacts(const string filename){
 
     return list;
 }
+
+void saveContact(const string file, string n, string p, string e){
+    //ios::app, allows to write text withouth deleting existing text
+    ofstream FS (file, ios::app);
+
+    FS<<"\n"<<n<<' '<<p<<' '<<e;
+
+
+}
