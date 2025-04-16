@@ -1,0 +1,3 @@
+print hello world
+var variable = 10
+print variable
